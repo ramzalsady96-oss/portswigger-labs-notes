@@ -1,55 +1,69 @@
-# web-security-labs
-ملاحظات وتطبيق عملي لتعلم أمن تطبيقات الويب باستخدام PortSwigger Labs.
 
-# 🛡️ Web Security Learning Path (PortSwigger Labs)
+#🛡️ web-security-labs
 
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Focus](https://img.shields.io/badge/Focus-Web%20Security-blue)
-![Level](https://img.shields.io/badge/Level-Beginner-orange)
+> A practical cybersecurity learning repository documenting my hands-on experience with PortSwigger Web Security Academy.
 
 ---
 
-## 📌 About This Project
-This repository documents my learning journey in Web Application Security using PortSwigger Web Security Academy.
+## 📖 About
 
-I focus on:
-- Understanding vulnerabilities
-- Practicing in safe labs
-- Writing clear technical notes
+I am a Cybersecurity student learning Web Application Security through practical labs rather than theory.
 
----
-
-## 🎯 Learning Goals
-- Understand how web attacks work
-- Practice real-world vulnerabilities safely
-- Build cybersecurity fundamentals
-- Improve hands-on skills
+This repository documents my learning process, including:
+- Vulnerability explanation
+- Root cause analysis
+- Exploitation steps
+- Security impact
+- Mitigation
+- Personal learning notes
 
 ---
 
-## 📚 Topics Covered
-- XSS (Cross-Site Scripting)
+## 🎯 Objective
+
+Build practical Web Security skills through hands-on lab practice and professional documentation.
+
+---
+
+## 📂 Repository Structure
+
+```
+Labs/
+Images/
+Resources/
+README.md
+```
+
+---
+
+## 📚 Learning Topics
+
+- Cross-Site Scripting (XSS)
 - SQL Injection
-- Authentication Attacks
-- CSRF
+- Authentication
 - Access Control
+- CSRF
+- SSRF
+- XXE
+- File Upload
+- Command Injection
 
 ---
 
-## 🧪 Methodology
-Each topic includes:
-✔ Explanation  
-✔ Example  
-✔ Impact  
-✔ Prevention  
-✔ Lab practice notes  
+## 🚀 Progress
+
+| Category | Status |
+|----------|--------|
+| XSS | ⏳ |
+| SQL Injection | ⏳ |
+| Authentication | ⏳ |
+| Access Control | ⏳ |
+| CSRF | ⏳ |
+| SSRF | ⏳ |
+| XXE | ⏳ |
 
 ---
 
-## 🚀 Status
-Continuously updated as I learn.
+## 📌 Learning Philosophy
 
----
-
-## ⭐ Philosophy
-> “I learn cybersecurity by practice, not memorization.”
+> Learn • Practice • Understand • Document
