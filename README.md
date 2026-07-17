@@ -1,4 +1,4 @@
-# portswigger-labs-notes
+# web-security-labs
 ملاحظات وتطبيق عملي لتعلم أمن تطبيقات الويب باستخدام PortSwigger Labs.
 
 # 🛡️ Web Security Learning Path (PortSwigger Labs)
