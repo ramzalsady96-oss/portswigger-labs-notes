@@ -58,3 +58,51 @@ The following payload was used in the controlled PortSwigger laboratory environm
 
 ```html
 <script>alert(1)</script> 
+
+
+The payload is interpreted as HTML/JavaScript because the application does not apply appropriate output encoding in the affected HTML context.
+
+## Evidence
+
+### Normal Request
+The search parameter is reflected in the application's response.
+
+Successful Exploitation
+The injected payload executes in the browser, demonstrating the presence of Reflected XSS.
+
+Screenshots demonstrating the successful exploitation are stored in the repository.
+
+## Impact
+Depending on the context and security controls of the vulnerable application, successful XSS exploitation may allow an attacker to:
+
+- Execute arbitrary JavaScript in the victim's browser context.
+- Modify the content presented to the victim.
+- Perform actions using the victim's authenticated session.
+- Conduct phishing or UI redressing attacks.
+- Access data exposed to client-side JavaScript.
+The actual impact depends on the application's architecture, browser security controls, cookie attributes, and available functionality.
+
+## Mitigation
+
+The primary mitigation is to apply context-appropriate output encoding to untrusted data before rendering it in HTML.
+
+Additional security controls may include:
+
+- Use framework-provided automatic output escaping.
+- Avoid inserting untrusted data directly into HTML.
+- Apply context-specific encoding based on where the data is rendered.
+- Use a strong Content Security Policy (CSP) as a defense-in-depth measure.
+- Sanitize HTML only when the application intentionally allows user-supplied HTML.
+- Input validation may provide additional protection in specific contexts, but it should not be considered the primary defense against XSS.
+
+## What I Learned
+- How Reflected XSS differs from
+Stored XSS.
+- How attacker-controlled input can be reflected into an HTML response.
+- Why context-appropriate output encoding is important.
+- How the browser interprets HTML and JavaScript.
+- How to identify the root cause of a Reflected XSS vulnerability.
+- How to document a web security vulnerability using a structured format.
+## References
+PortSwigger Web Security Academy — Cross-Site Scripting (XSS)⁠�
+OWASP Cross Site Scripting Prevention Cheat Sheet⁠�
