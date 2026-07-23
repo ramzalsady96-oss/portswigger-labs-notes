@@ -78,4 +78,4 @@ The application inserts user input directly into the HTML page without escaping 
 
 ## References
 
-- https://portswigger.net/web-security/cross-site-scripting
+- https://portswigger.net/web-security/cross-site-scripting 
