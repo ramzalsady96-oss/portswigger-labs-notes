@@ -2,7 +2,7 @@
 
 This directory contains my practical notes and solutions for Cross-Site Scripting (XSS) labs from PortSwigger Web Security Academy.
 
-## Labs
+## Labs 
 
 | Lab | Status |
 |------|--------|
