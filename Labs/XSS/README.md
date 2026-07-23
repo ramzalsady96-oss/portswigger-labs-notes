@@ -11,9 +11,9 @@ The goal of this project is not only to solve security labs, but also to underst
 Lab Progress
 
 # | Lab | Type | Difficulty | Status
-01 | Reflected XSS into HTML Context with Nothing Encoded | Reflected XSS | Apprentice | ✅ Completed
-02 | Stored XSS | Stored XSS | —| ⏳ In Progress
-03 | DOM-based XSS | DOM XSS | —| ⏳ In Progress
+1- | Reflected XSS into HTML Context with Nothing Encoded | Reflected XSS | Apprentice | ✅ Completed
+2- | Stored XSS | Stored XSS | —| ⏳ In Progress
+3- | DOM-based XSS | DOM XSS | —| ⏳ In Progress
 
 ---
 
