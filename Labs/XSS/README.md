@@ -1,4 +1,4 @@
-## Cross-Site Scripting (XSS) Labs
+# Cross-Site Scripting (XSS) Labs
 
 This directory contains my practical cybersecurity notes, vulnerability analysis, exploitation methodology, and remediation guidance for Cross-Site Scripting (XSS) vulnerabilities.
 
@@ -8,16 +8,17 @@ The goal of this project is not only to solve security labs, but also to underst
 
 ---
 
-Lab Progress
+## Lab Progress
 
-# | Lab | Type | Difficulty | Status
-1- | Reflected XSS into HTML Context with Nothing Encoded | Reflected XSS | Apprentice | ✅ Completed
-2- | Stored XSS | Stored XSS | —| ⏳ In Progress
-3- | DOM-based XSS | DOM XSS | —| ⏳ In Progress
+| # | Lab | Type | Difficulty | Status |
+|---|-----|------|------------|--------|
+| 01 | Reflected XSS into HTML Context with Nothing Encoded | Reflected XSS | Apprentice | ✅ Completed |
+| 02 | Stored XSS | Stored XSS | — | ⏳ In Progress |
+| 03 | DOM-based XSS | DOM XSS | — | ⏳ In Progress |
 
 ---
 
-Topics Covered
+## Topics Covered
 
 - Reflected Cross-Site Scripting
 - Stored Cross-Site Scripting
@@ -33,7 +34,7 @@ Topics Covered
 
 ---
 
-Documentation Methodology
+## Documentation Methodology
 
 For each completed lab, I document the following:
 
@@ -53,8 +54,9 @@ This structure helps demonstrate the complete vulnerability lifecycle from ident
 
 ---
 
-Project Structure
+## Project Structure
 
+```text
 XSS/
 │
 ├── README.md
@@ -72,12 +74,8 @@ XSS/
 │
 └── references/
 
----
-
-Practical XSS Learning Path
-
+#### Practical XSS Learning Path
 The learning path followed in this project is:
-
 Understand XSS
        ↓
 Study Vulnerable Behavior
@@ -98,41 +96,25 @@ Study Remediation
        ↓
 Retest
 
----
-
 Custom XSS Security Lab
-
 After completing the PortSwigger XSS labs, I plan to build a custom educational web application designed to demonstrate XSS vulnerabilities and their remediation.
-
 The custom lab will include:
-
-- Reflected XSS
-- Stored XSS
-- DOM-based XSS
-- Vulnerable application versions
-- Secure application versions
-- JavaScript source and sink analysis
-- Before-and-after security testing
-- Evidence screenshots
-- Technical documentation
-- Security assessment report
-
+Reflected XSS
+Stored XSS
+DOM-based XSS
+Vulnerable application versions
+Secure application versions
+JavaScript source and sink analysis
+Before-and-after security testing
+Evidence screenshots
+Technical documentation
+Security assessment report
 The purpose of the custom lab is to demonstrate practical understanding of how XSS vulnerabilities occur and how secure coding practices can prevent them.
-
----
-
 Security Disclaimer
-
 All security testing documented in this repository is performed in intentionally vulnerable and authorized educational environments.
-
 The techniques and code are provided for cybersecurity education, secure development, and defensive security research.
-
 Do not test systems or applications without explicit authorization.
-
----
-
 References
-
-- "PortSwigger Web Security Academy — Cross-Site Scripting" (https://portswigger.net/web-security/cross-site-scripting)
-- "OWASP — Cross Site Scripting Prevention Cheat Sheet" (https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
-- "OWASP — Web Security Testing Guide" (https://owasp.org/www-project-web-security-testing-guide/)
+PortSwigger Web Security Academy — Cross-Site Scripting⁠�
+OWASP — Cross Site Scripting Prevention Cheat Sheet⁠�
+OWASP — Web Security Testing Guide⁠�
