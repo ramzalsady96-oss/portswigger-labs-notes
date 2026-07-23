@@ -56,8 +56,8 @@ Because characters such as `<` and `>` are not encoded, attacker-controlled HTML
 
 The following payload was used in the controlled PortSwigger laboratory environment:
 
-html
-'<script>alert(1)</script>`
+``html
+<script>alert(1)</script>``
 
 ---
 
