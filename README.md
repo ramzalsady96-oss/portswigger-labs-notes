@@ -147,4 +147,4 @@ These projects are intended to demonstrate practical cybersecurity knowledge com
 Project 01 — XSS Security Lab
 Project Overview
 The XSS Security Lab is a custom educational web application that I plan to design and build to demonstrate Cross-Site Scripting vulnerabilities and their remediation.
-The project will be designed as a practical security training environment where the vulnerability lifecycle can be studied from multiple perspectives:
+The project will be designed as a practical security training environment where the vulnerability lifecycle can be studied from multiple perspectives: 
