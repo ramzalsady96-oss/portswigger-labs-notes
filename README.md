@@ -88,6 +88,7 @@ portswigger-labs-notes/
         │
         └── reports/
             └── xss-security-assessment.pdf
+```
 
 Part 1 — PortSwigger Web Security Academy Labs
 Overview
