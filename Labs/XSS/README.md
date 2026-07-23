@@ -1,4 +1,4 @@
-# Cross-Site Scripting (XSS) Labs
+## Cross-Site Scripting (XSS) Labs
 
 This directory contains my practical cybersecurity notes, vulnerability analysis, exploitation methodology, and remediation guidance for Cross-Site Scripting (XSS) vulnerabilities.
 
@@ -10,10 +10,10 @@ The goal of this project is not only to solve security labs, but also to underst
 
 Lab Progress
 
-#| Lab| Type| Difficulty| Status
-01| Reflected XSS into HTML Context with Nothing Encoded| Reflected XSS| Apprentice| ✅ Completed
-02| Stored XSS| Stored XSS| —| ⏳ In Progress
-03| DOM-based XSS| DOM XSS| —| ⏳ In Progress
+# | Lab | Type | Difficulty | Status
+01 | Reflected XSS into HTML Context with Nothing Encoded | Reflected XSS | Apprentice | ✅ Completed
+02 | Stored XSS | Stored XSS | —| ⏳ In Progress
+03 | DOM-based XSS | DOM XSS | —| ⏳ In Progress
 
 ---
 
