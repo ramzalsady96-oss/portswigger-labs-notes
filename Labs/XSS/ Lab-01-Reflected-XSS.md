@@ -58,7 +58,7 @@ The following payload was used in the controlled PortSwigger laboratory environm
 
 ```html
 <script>alert(1)</script>
-
+'''
 
 
 The payload is interpreted as HTML/JavaScript because the application does not apply appropriate output encoding in the affected HTML context.
