@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reflected XSS Lab | XSS Security Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">X</div>
+
+            <div>
+                <h1>XSS Lab</h1>
+                <span>Security Platform</span>
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="../../dashboard/index.html">
+                Dashboard
+            </a>
+
+            <a href="#overview" class="active">
+                Lab Overview
+            </a>
+
+            <a href="#analysis">
+                Security Analysis
+            </a>
+
+            <a href="#testing">
+                Testing
+            </a>
+
+            <a href="#comparison">
+                Before / After
+            </a>
+
+            <a href="#documentation">
+                Documentation
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <span class="breadcrumb">
+                    XSS Security Lab / Reflected XSS
+                </span>
+
+                <h2>Reflected XSS Laboratory</h2>
+            </div>
+
+            <span class="status">
+                Educational Environment
+            </span>
+
+        </header>
+
+
+        <!-- Overview -->
+
+        <section id="overview" class="hero">
+
+            <span class="label">
+                LAB 01 · REFLECTED XSS
+            </span>
+
+            <h1>
+                Reflected XSS
+                <span>Security Laboratory</span>
+            </h1>
+
+            <p>
+                A controlled educational laboratory designed to demonstrate
+                how user-controlled input can be reflected into an HTML
+                response and become executable in the browser.
+            </p>
+
+            <div class="tags">
+
+                <span>Web Security</span>
+                <span>Cross-Site Scripting</span>
+                <span>HTML Context</span>
+                <span>JavaScript</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Lab Information -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <span class="label">
+                    LAB INFORMATION
+                </span>
+
+                <h2>Laboratory Details</h2>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <span>Vulnerability</span>
+
+                    <strong>
+                        Reflected XSS
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span>Context</span>
+
+                    <strong>
+                        HTML Context
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span>Difficulty</span>
+
+                    <strong>
+                        Beginner
+                    </strong>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span>Environment</span>
+
+                    <strong>
+                        Local Laboratory
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Architecture -->
+
+        <section id="analysis" class="section">
+
+            <div class="section-title">
+
+                <span class="label">
+                    SECURITY ANALYSIS
+                </span>
+
+                <h2>Source → Data Flow → Sink</h2>
+
+            </div>
+
+
+            <div class="flow">
+
+                <div class="flow-card">
+
+                    <span class="flow-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Source
+                    </h3>
+
+                    <p>
+                        The user-controlled search parameter is received
+                        from the URL query string.
+                    </p>
+
+                    <code>
+                        URLSearchParams
+                    </code>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="flow-card">
+
+                    <span class="flow-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Data Flow
+                    </h3>
+
+                    <p>
+                        The input travels through JavaScript and reaches
+                        the HTML rendering logic.
+                    </p>
+
+                    <code>
+                        userInput → render()
+                    </code>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+                <div class="flow-card">
+
+                    <span class="flow-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Sink
+                    </h3>
+
+                    <p>
+                        The vulnerable version inserts the input into
+                        the DOM using an unsafe HTML operation.
+                    </p>
+
+                    <code>
+                        innerHTML
+                    </code>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Testing -->
+
+        <section id="testing" class="section">
+
+            <div class="section-title">
+
+                <span class="label">
+                    CONTROLLED TESTING
+                </span>
+
+                <h2>Laboratory Versions</h2>
+
+            </div>
+
+
+            <div class="testing-grid">
+
+
+                <div class="testing-card vulnerable">
+
+                    <div class="card-top">
+
+                        <span class="severity">
+                            VULNERABLE
+                        </span>
+
+                        <span class="number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Vulnerable Application
+                    </h3>
+
+                    <p>
+                        Intentionally vulnerable implementation used
+                        to study the root cause and reproduce the issue
+                        in a controlled environment.
+                    </p>
+
+                    <a
+                        href="vulnerable/index.html"
+                        class="button danger"
+                    >
+                        Open Vulnerable Lab →
+                    </a>
+
+                </div>
+
+
+                <div class="testing-card secure">
+
+                    <div class="card-top">
+
+                        <span class="severity">
+                            SECURE
+                        </span>
+
+                        <span class="number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Secure Application
+                    </h3>
+
+                    <p>
+                        Remediated implementation demonstrating safer
+                        handling of untrusted user input.
+                    </p>
+
+                    <a
+                        href="secure/index.html"
+                        class="button success"
+                    >
+                        Open Secure Lab →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Comparison -->
+
+        <section id="comparison" class="section">
+
+            <div class="section-title">
+
+                <span class="label">
+                    SECURITY COMPARISON
+                </span>
+
+                <h2>Before vs After</h2>
+
+            </div>
+
+
+            <div class="comparison">
+
+                <div>
+
+                    <h3>
+                        Before Remediation
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            User input is treated as trusted.
+                        </li>
+
+                        <li>
+                            Input reaches an HTML rendering sink.
+                        </li>
+
+                        <li>
+                            HTML is interpreted by the browser.
+                        </li>
+
+                        <li>
+                            The application is vulnerable to XSS.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        After Remediation
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            User input is treated as untrusted.
+                        </li>
+
+                        <li>
+                            Data is inserted using safe DOM APIs.
+                        </li>
+
+                        <li>
+                            User input is rendered as text.
+                        </li>
+
+                        <li>
+                            The original XSS behavior is prevented.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Documentation -->
+
+        <section id="documentation" class="section">
+
+            <div class="section-title">
+
+                <span class="label">
+                    DOCUMENTATION
+                </span>
+
+                <h2>Technical Documentation</h2>
+
+            </div>
+
+
+            <div class="docs">
+
+                <a href="documentation/vulnerability-analysis.md">
+                    Vulnerability Analysis
+                </a>
+
+                <a href="documentation/source-dataflow-sink.md">
+                    Source / Data Flow / Sink
+                </a>
+
+                <a href="documentation/remediation.md">
+                    Remediation
+                </a>
+
+                <a href="documentation/before-after.md">
+                    Before / After Analysis
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                XSS Security Lab · Reflected XSS Laboratory
+            </p>
+
+            <span>
+                Authorized Educational Environment
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
