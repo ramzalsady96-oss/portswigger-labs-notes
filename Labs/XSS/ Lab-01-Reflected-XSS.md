@@ -1,81 +1,122 @@
-# Reflected XSS into HTML context with nothing encoded
+Reflected XSS into HTML Context with Nothing Encoded
 
-## Lab Information
+Lab Information
 
-| Item | Value |
-|------|-------|
-| Category | Cross-Site Scripting (XSS) |
-| Lab | Reflected XSS into HTML context with nothing encoded |
-| Difficulty | Apprentice |
-| Status | ✅ Completed |
-
----
-
-## Objective
-
-Inject JavaScript into the search parameter and execute it in the victim's browser.
+Item| Value
+Category| Cross-Site Scripting (XSS)
+Type| Reflected XSS
+Context| HTML Context
+Lab| Reflected XSS into HTML context with nothing encoded
+Difficulty| Apprentice
+Platform| PortSwigger Web Security Academy
+Status| ✅ Completed
 
 ---
 
-## Vulnerability Overview
+Objective
 
-This lab is vulnerable to Reflected Cross-Site Scripting (Reflected XSS). User input is reflected in the HTML response without validation or output encoding, allowing JavaScript code to execute in the browser.
-
----
-
-## Root Cause
-
-The application inserts user input directly into the HTML page without escaping or encoding special characters.
+The objective of this lab is to identify and exploit a Reflected Cross-Site Scripting (XSS) vulnerability by injecting JavaScript into the application's search parameter and causing the payload to execute in the browser.
 
 ---
 
-## Exploitation Steps
+Vulnerability Overview
 
-1. Open the lab.
-2. Navigate to the search function.
-3. Inject a JavaScript payload.
-4. Submit the request.
-5. Observe that the JavaScript executes.
-6. The lab is solved.
+Reflected Cross-Site Scripting (XSS) occurs when an application receives attacker-controlled input through an HTTP request and reflects that input into the application's response without applying appropriate output encoding for the context in which the data is rendered.
+
+In this lab, the user-controlled search parameter is reflected directly into the HTML response without HTML encoding.
+
+As a result, an attacker can inject HTML containing JavaScript that is interpreted and executed by the victim's browser.
 
 ---
 
-## Payload
+Root Cause
 
-```html
+The root cause is the unsafe handling of untrusted user input in an HTML context.
+
+The application reflects the value of the search parameter into the HTML response without applying appropriate HTML output encoding.
+
+Because characters such as "<" and ">" are not encoded, attacker-controlled HTML elements can be interpreted by the browser as markup instead of being displayed as plain text.
+
+---
+
+Exploitation Steps
+
+1. Open the PortSwigger Web Security Academy lab.
+2. Identify the application's search functionality.
+3. Enter a normal search term and observe how the value is reflected in the response.
+4. Test whether special HTML characters are encoded.
+5. Submit a controlled XSS payload through the search parameter.
+6. Observe that the injected JavaScript executes in the browser.
+7. Confirm that the lab is successfully solved.
+
+---
+
+Proof of Concept
+
+The following payload was used in the controlled PortSwigger laboratory environment:
+
 <script>alert(1)</script>
-```
+
+The payload is interpreted as HTML/JavaScript because the application does not apply appropriate output encoding in the affected HTML context.
 
 ---
 
-## Impact
+Evidence
 
-- Execute arbitrary JavaScript.
-- Steal session cookies (when not protected).
-- Perform actions as the victim.
-- Modify page content.
-- Phishing attacks.
+Normal Request
+
+The search parameter is reflected in the application's response.
+
+Successful Exploitation
+
+The injected payload executes in the browser, demonstrating the presence of Reflected XSS.
+
+Screenshots demonstrating the successful exploitation are stored in the repository.
 
 ---
 
-## Mitigation
+Impact
 
-- Validate user input.
-- Encode output before rendering.
-- Use Content Security Policy (CSP).
+Depending on the context and security controls of the vulnerable application, successful XSS exploitation may allow an attacker to:
+
+- Execute arbitrary JavaScript in the victim's browser context.
+- Modify the content presented to the victim.
+- Perform actions using the victim's authenticated session.
+- Conduct phishing or UI redressing attacks.
+- Access data exposed to client-side JavaScript.
+
+The actual impact depends on the application's architecture, browser security controls, cookie attributes, and available functionality.
+
+---
+
+Mitigation
+
+The primary mitigation is to apply context-appropriate output encoding to untrusted data before rendering it in HTML.
+
+Additional security controls may include:
+
+- Use framework-provided automatic output escaping.
 - Avoid inserting untrusted data directly into HTML.
+- Apply context-specific encoding based on where the data is rendered.
+- Use a strong Content Security Policy (CSP) as a defense-in-depth measure.
+- Sanitize HTML only when the application intentionally allows user-supplied HTML.
+
+Input validation may provide additional protection in specific contexts, but it should not be considered the primary defense against XSS.
 
 ---
 
-## What I Learned
+What I Learned
 
-- Difference between reflected input and stored input.
-- How reflected XSS occurs.
-- Why output encoding is important.
-- How JavaScript executes inside the browser.
+- How Reflected XSS differs from Stored XSS.
+- How attacker-controlled input can be reflected into an HTML response.
+- Why context-appropriate output encoding is important.
+- How the browser interprets HTML and JavaScript.
+- How to identify the root cause of a Reflected XSS vulnerability.
+- How to document a web security vulnerability using a structured format.
 
 ---
 
-## References
+References
 
-- https://portswigger.net/web-security/cross-site-scripting 
+- "PortSwigger Web Security Academy — Cross-Site Scripting (XSS)" (https://portswigger.net/web-security/cross-site-scripting)
+- "OWASP Cross Site Scripting Prevention Cheat Sheet" (https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
