@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XSS Security Lab | Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">X</div>
+
+                <div>
+                    <h1>XSS Lab</h1>
+                    <span>Security Platform</span>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-link active">
+                    <span>▣</span>
+                    Dashboard
+                </a>
+
+                <a href="#labs" class="nav-link">
+                    <span>◈</span>
+                    Security Labs
+                </a>
+
+                <a href="#analysis" class="nav-link">
+                    <span>⌘</span>
+                    Security Analysis
+                </a>
+
+                <a href="#testing" class="nav-link">
+                    <span>✓</span>
+                    Security Testing
+                </a>
+
+                <a href="#documentation" class="nav-link">
+                    <span>▤</span>
+                    Documentation
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>Educational Security Lab</span>
+                <small>Version 1.0</small>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Topbar -->
+            <header class="topbar">
+
+                <div>
+                    <p class="breadcrumb">Security Lab / Dashboard</p>
+                    <h2>Security Dashboard</h2>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Lab Environment
+                </div>
+
+            </header>
+
+
+            <!-- Hero -->
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        WEB APPLICATION SECURITY
+                    </span>
+
+                    <h1>
+                        Cross-Site Scripting
+                        <span>Security Lab</span>
+                    </h1>
+
+                    <p>
+                        An educational security laboratory designed to
+                        understand XSS vulnerabilities, analyze JavaScript
+                        data flow, study vulnerable behavior, and implement
+                        secure remediation.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#labs" class="btn primary">
+                            Explore Labs
+                        </a>
+
+                        <a href="#analysis" class="btn secondary">
+                            Security Analysis
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Statistics -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">◈</div>
+
+                    <div>
+                        <span>Total Labs</span>
+                        <strong>3</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">✓</div>
+
+                    <div>
+                        <span>Completed</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">!</div>
+
+                    <div>
+                        <span>Vulnerable Versions</span>
+                        <strong>3</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">+</div>
+
+                    <div>
+                        <span>Secure Versions</span>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Labs -->
+            <section class="section" id="labs">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">
+                            SECURITY LABORATORIES
+                        </span>
+
+                        <h2>Available Labs</h2>
+                    </div>
+
+                    <span class="section-count">
+                        3 Labs
+                    </span>
+
+                </div>
+
+
+                <div class="labs-grid">
+
+
+                    <!-- Reflected XSS -->
+                    <article class="lab-card">
+
+                        <div class="lab-header">
+
+                            <div class="lab-number">
+                                01
+                            </div>
+
+                            <span class="badge planned">
+                                Planned
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Reflected XSS
+                        </h3>
+
+                        <p>
+                            Study how user-controlled input can be reflected
+                            into an HTML response and lead to Cross-Site
+                            Scripting vulnerabilities.
+                        </p>
+
+                        <div class="lab-meta">
+
+                            <span>
+                                Difficulty: Beginner
+                            </span>
+
+                            <span>
+                                Type: Reflected
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="../labs/reflected-xss/index.html"
+                            class="lab-link"
+                        >
+                            Open Laboratory →
+                        </a>
+
+                    </article>
+
+
+                    <!-- Stored XSS -->
+                    <article class="lab-card">
+
+                        <div class="lab-header">
+
+                            <div class="lab-number">
+                                02
+                            </div>
+
+                            <span class="badge planned">
+                                Planned
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Stored XSS
+                        </h3>
+
+                        <p>
+                            Study persistent Cross-Site Scripting where
+                            malicious input is stored by the application
+                            and later rendered to users.
+                        </p>
+
+                        <div class="lab-meta">
+
+                            <span>
+                                Difficulty: Beginner
+                            </span>
+
+                            <span>
+                                Type: Stored
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="../labs/stored-xss/index.html"
+                            class="lab-link"
+                        >
+                            Open Laboratory →
+                        </a>
+
+                    </article>
+
+
+                    <!-- DOM XSS -->
+                    <article class="lab-card">
+
+                        <div class="lab-header">
+
+                            <div class="lab-number">
+                                03
+                            </div>
+
+                            <span class="badge planned">
+                                Planned
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            DOM-based XSS
+                        </h3>
+
+                        <p>
+                            Analyze client-side JavaScript data flows,
+                            Sources, Sinks, and unsafe DOM manipulation.
+                        </p>
+
+                        <div class="lab-meta">
+
+                            <span>
+                                Difficulty: Intermediate
+                            </span>
+
+                            <span>
+                                Type: DOM
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="../labs/dom-xss/index.html"
+                            class="lab-link"
+                        >
+                            Open Laboratory →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Security Analysis -->
+            <section class="section" id="analysis">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">
+                            SECURITY ANALYSIS
+                        </span>
+
+                        <h2>Vulnerability Analysis</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="analysis-grid">
+
+                    <div class="analysis-card">
+
+                        <span class="analysis-number">
+                            01
+                        </span>
+
+                        <h3>Source</h3>
+
+                        <p>
+                            Identify where untrusted or user-controlled
+                            data enters the application.
+                        </p>
+
+                    </div>
+
+
+                    <div class="analysis-card">
+
+                        <span class="analysis-number">
+                            02
+                        </span>
+
+                        <h3>Data Flow</h3>
+
+                        <p>
+                            Trace how the data moves through the application
+                            and JavaScript processing logic.
+                        </p>
+
+                    </div>
+
+
+                    <div class="analysis-card">
+
+                        <span class="analysis-number">
+                            03
+                        </span>
+
+                        <h3>Sink</h3>
+
+                        <p>
+                            Identify where untrusted data reaches a sensitive
+                            or potentially dangerous operation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="analysis-card">
+
+                        <span class="analysis-number">
+                            04
+                        </span>
+
+                        <h3>Remediation</h3>
+
+                        <p>
+                            Implement appropriate security controls and
+                            retest the application after remediation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Testing -->
+            <section class="section" id="testing">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">
+                            SECURITY TESTING
+                        </span>
+
+                        <h2>Vulnerable vs Secure</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="comparison">
+
+                    <div class="comparison-card vulnerable">
+
+                        <div class="comparison-title">
+
+                            <span class="comparison-icon">
+                                !
+                            </span>
+
+                            <div>
+                                <h3>Vulnerable Version</h3>
+                                <span>Security testing environment</span>
+                            </div>
+
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Controlled vulnerable application
+                            </li>
+
+                            <li>
+                                Security issue reproduction
+                            </li>
+
+                            <li>
+                                Source and sink analysis
+                            </li>
+
+                            <li>
+                                Evidence collection
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="comparison-card secure">
+
+                        <div class="comparison-title">
+
+                            <span class="comparison-icon">
+                                ✓
+                            </span>
+
+                            <div>
+                                <h3>Secure Version</h3>
+                                <span>Remediated application</span>
+                            </div>
+
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Security remediation
+                            </li>
+
+                            <li>
+                                Safer data handling
+                            </li>
+
+                            <li>
+                                Secure coding practices
+                            </li>
+
+                            <li>
+                                Retesting and verification
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Documentation -->
+            <section class="section" id="documentation">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">
+                            DOCUMENTATION
+                        </span>
+
+                        <h2>Project Documentation</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="documentation-list">
+
+                    <div class="doc-item">
+
+                        <span>01</span>
+
+                        <div>
+                            <h3>Vulnerability Analysis</h3>
+
+                            <p>
+                                Technical analysis of the vulnerability,
+                                root cause, and application behavior.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="doc-item">
+
+                        <span>02</span>
+
+                        <div>
+                            <h3>JavaScript Security Analysis</h3>
+
+                            <p>
+                                Analysis of Sources, Data Flow, and Sinks
+                                in client-side JavaScript.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="doc-item">
+
+                        <span>03</span>
+
+                        <div>
+                            <h3>Remediation</h3>
+
+                            <p>
+                                Documentation of the implemented security
+                                controls and mitigation techniques.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="doc-item">
+
+                        <span>04</span>
+
+                        <div>
+                            <h3>Security Assessment Report</h3>
+
+                            <p>
+                                Professional documentation of findings,
+                                impact, remediation, and retesting.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="footer">
+
+                <p>
+                    XSS Security Lab — Educational Cybersecurity Project
+                </p>
+
+                <span>
+                    Built for Security Education & Research
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
