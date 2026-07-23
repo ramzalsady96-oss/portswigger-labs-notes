@@ -57,11 +57,13 @@ Because characters such as `<` and `>` are not encoded, attacker-controlled HTML
 The following payload was used in the controlled PortSwigger laboratory environment:
 
 ```html
-<script>alert(1)</script> 
+<script>alert(1)</script>```
 
+---
 
 The payload is interpreted as HTML/JavaScript because the application does not apply appropriate output encoding in the affected HTML context.
 
+---
 ## Evidence
 
 ### Normal Request
@@ -72,6 +74,7 @@ The injected payload executes in the browser, demonstrating the presence of Refl
 
 Screenshots demonstrating the successful exploitation are stored in the repository.
 
+---
 ## Impact
 Depending on the context and security controls of the vulnerable application, successful XSS exploitation may allow an attacker to:
 
@@ -82,6 +85,7 @@ Depending on the context and security controls of the vulnerable application, su
 - Access data exposed to client-side JavaScript.
 The actual impact depends on the application's architecture, browser security controls, cookie attributes, and available functionality.
 
+---
 ## Mitigation
 
 The primary mitigation is to apply context-appropriate output encoding to untrusted data before rendering it in HTML.
@@ -95,6 +99,7 @@ Additional security controls may include:
 - Sanitize HTML only when the application intentionally allows user-supplied HTML.
 - Input validation may provide additional protection in specific contexts, but it should not be considered the primary defense against XSS.
 
+---
 ## What I Learned
 - How Reflected XSS differs from
 Stored XSS.
@@ -103,6 +108,8 @@ Stored XSS.
 - How the browser interprets HTML and JavaScript.
 - How to identify the root cause of a Reflected XSS vulnerability.
 - How to document a web security vulnerability using a structured format.
+
+----
 ## References
 PortSwigger Web Security Academy — Cross-Site Scripting (XSS)⁠�
 OWASP Cross Site Scripting Prevention Cheat Sheet⁠�
