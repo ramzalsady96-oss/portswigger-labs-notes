@@ -57,11 +57,11 @@ Because characters such as `<` and `>` are not encoded, attacker-controlled HTML
 The following payload was used in the controlled PortSwigger laboratory environment:
 
 ```html
-<script>alert(1)</script>```
+<script>alert(1)</script>
 
 ---
 
-The payload is interpreted as HTML/JavaScript because the application does not apply appropriate output encoding in the affected HTML context.
+### The payload is interpreted as HTML/JavaScript because the application does not apply appropriate output encoding in the affected HTML context.
 
 ---
 ## Evidence
